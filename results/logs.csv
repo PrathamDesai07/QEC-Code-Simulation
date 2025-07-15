@@ -1830,3 +1830,173 @@ Testing Surface with logical bit |1⟩ and noise=depolarizing, p=0.9
 Syndrome values: [0.04, 0.04]
 Syndrome bits:   [0, 0]
 Decoder output: No error
+
+==== LOG START: 2025-07-15 13:43:29.660353 ====
+
+Testing Shor with logical bit |0⟩ and noise=None, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.0156
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 0, 0, 0, 0]
+Decoder output: No error
+
+Testing Steane with logical bit |0⟩ and noise=None, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.5000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [1.0, 1.0, 1.0]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |0⟩ and noise=None, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 1.0000
+[SUCCESS] High fidelity match.
+Syndrome values: [1.0, 1.0]
+Syndrome bits:   [0, 0]
+Decoder output: No error
+
+Testing Shor with logical bit |1⟩ and noise=None, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 0, 0, 0, 0]
+Decoder output: No error
+
+Testing Steane with logical bit |1⟩ and noise=None, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [1.0, 1.0, 1.0]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |1⟩ and noise=None, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [1.0, 1.0]
+Syndrome bits:   [0, 0]
+Decoder output: No error
+
+Testing Shor with logical bit |0⟩ and noise=bit_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.0086
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, -0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 1, 0, 0, 0]
+Decoder output: Bit-flip on qubit 3 or 4
+
+Testing Steane with logical bit |0⟩ and noise=bit_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.2391
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.41, 0.41, 0.41]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |0⟩ and noise=bit_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.0000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.64, 0.64]
+Syndrome bits:   [0, 0]
+Decoder output: No error
+
+Testing Shor with logical bit |1⟩ and noise=bit_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0019
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, -0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 1, 0, 0, 0]
+Decoder output: Bit-flip on qubit 3 or 4
+
+Testing Steane with logical bit |1⟩ and noise=bit_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0266
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.41, 0.41, 0.41]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |1⟩ and noise=bit_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0656
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.64, 0.64]
+Syndrome bits:   [0, 0]
+Decoder output: No error
+
+Testing Shor with logical bit |0⟩ and noise=phase_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.0156
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 0, 0, 0, 0]
+Decoder output: No error
+
+Testing Steane with logical bit |0⟩ and noise=phase_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.5000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [1.0, 1.0, 1.0]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |0⟩ and noise=phase_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 1.0000
+[SUCCESS] High fidelity match.
+Syndrome values: [1.0, 1.0]
+Syndrome bits:   [0, 0]
+Decoder output: No error
+
+Testing Shor with logical bit |1⟩ and noise=phase_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 0, 0, 0, 0]
+Decoder output: No error
+
+Testing Steane with logical bit |1⟩ and noise=phase_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [1.0, 1.0, 1.0]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |1⟩ and noise=phase_flip, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0000
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [1.0, 1.0]
+Syndrome bits:   [0, 0]
+Decoder output: No error
+
+Testing Shor with logical bit |0⟩ and noise=depolarizing, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.0022
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 0, 0, 0, 0]
+Decoder output: No error
+
+Testing Steane with logical bit |0⟩ and noise=depolarizing, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.0148
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.002, 0.002, 0.002]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |0⟩ and noise=depolarizing, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |0⟩ = 0.0102
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.04, 0.04]
+Syndrome bits:   [0, 0]
+Decoder output: No error
+
+Testing Shor with logical bit |1⟩ and noise=depolarizing, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0020
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+Syndrome bits:   [0, 0, 0, 0, 0, 0]
+Decoder output: No error
+
+Testing Steane with logical bit |1⟩ and noise=depolarizing, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0106
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.002, 0.002, 0.002]
+Syndrome bits:   [0, 0, 0]
+Decoder output: No error
+
+Testing Surface with logical bit |1⟩ and noise=depolarizing, p=0.9
+[VALID] State trace ok. Fidelity w/ expected |1⟩ = 0.0518
+[WARNING] Low fidelity — likely logical error.
+Syndrome values: [0.04, 0.04]
+Syndrome bits:   [0, 0]
+Decoder output: No error

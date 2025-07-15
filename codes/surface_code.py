@@ -34,13 +34,30 @@ def surface_encoder():
 
     return combined_circuit
 
+import pymatching
+
 def surface_decoder(syndrome_bits):
-    if syndrome_bits == [0, 0]:
+    # Hardcoded 2D surface code graph with 2 stabilizers and 3 edges (simplified)
+    # This is only for a minimal toy model. For real codes, this graph must be built properly.
+    
+    # Syndrome indices match stabilizers [Z0Z1, Z1Z3]
+    # Qubits: 0, 1, 2, 3, 4 (data)
+    # Stabilizers: s0 = Z0Z1, s1 = Z1Z3
+
+    # Define parity check matrix (rows: stabilizers, cols: qubits)
+    H = [
+        [1, 1, 0, 0, 0],  # Z0Z1: touches qubits 0,1
+        [0, 1, 0, 1, 0],  # Z1Z3: touches qubits 1,3
+    ]
+
+    matching = pymatching.Matching(H)
+    
+    # MWPM decoding: input is syndrome bits
+    correction = matching.decode(syndrome_bits)
+
+    if not any(correction):
         return "No error"
-    elif syndrome_bits == [1, 0]:
-        return "Possible X error on qubit 0 or 1"
-    elif syndrome_bits == [0, 1]:
-        return "Possible X error on qubit 1 or 3"
-    elif syndrome_bits == [1, 1]:
-        return "Multiple X errors or propagation"
-    return "Unknown error pattern"
+
+    # Identify which qubits were corrected
+    qubits = [i for i, bit in enumerate(correction) if bit]
+    return f"MWPM corrected qubit(s): {qubits}"
