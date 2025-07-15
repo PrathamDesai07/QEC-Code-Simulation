@@ -42,5 +42,14 @@ def shor_encoder():
 
     return combined_circuit
 
-def shor_decoder(state):
-    return state
+def shor_decoder(syndrome_bits):
+    table = {
+        (0, 0, 0, 0, 0, 0): "No error",
+        (1, 0, 0, 0, 0, 0): "Bit-flip on qubit 0 or 1",
+        (0, 1, 0, 0, 0, 0): "Bit-flip on qubit 1 or 2",
+        (0, 0, 1, 0, 0, 0): "Bit-flip on qubit 3 or 4",
+        (0, 0, 0, 1, 0, 0): "Bit-flip on qubit 4 or 5",
+        (0, 0, 0, 0, 1, 0): "Bit-flip on qubit 6 or 7",
+        (0, 0, 0, 0, 0, 1): "Bit-flip on qubit 7 or 8",
+    }
+    return table.get(tuple(syndrome_bits), "Unknown error pattern")

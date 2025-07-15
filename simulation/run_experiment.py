@@ -71,8 +71,10 @@ def test_code(code_name, encoder, decoder, logical_bit=0, noise_type=None, p=0.0
     log_and_print(f"Syndrome values: {np.round(synd_vals, 3).tolist()}")
     log_and_print(f"Syndrome bits:   {synd_bits}")
 
-    # Optional decoder application
-    _ = decoder(rho)
+    # Classical decoder usage
+    decoded = decoder(synd_bits)
+    log_and_print(f"Decoder output: {decoded}")
+
     return rho
 
 # Stabilizers for each code
@@ -82,7 +84,7 @@ SURFACE_STABILIZERS = [(0,1), (1,3)]
 
 def main():
     with open(LOG_PATH, "a") as f:
-        f.write(f"\n==== LOG START: {datetime.datetime.now()} ====" + "\n")
+        f.write(f"\n==== LOG START: {datetime.datetime.now()} ====\n")
 
     noise_models = [None, "bit_flip", "phase_flip", "depolarizing"]
     for noise in noise_models:

@@ -38,5 +38,15 @@ def steane_encoder():
 
     return combined_circuit
 
-def steane_decoder(state):
-    return state
+def steane_decoder(syndrome_bits):
+    table = {
+        (0, 0, 0): "No error",
+        (1, 0, 0): "Error on qubit 0",
+        (0, 1, 0): "Error on qubit 1",
+        (0, 0, 1): "Error on qubit 2",
+        (1, 1, 0): "Error on qubit 3",
+        (1, 0, 1): "Error on qubit 4",
+        (0, 1, 1): "Error on qubit 5",
+        (1, 1, 1): "Error on qubit 6",
+    }
+    return table.get(tuple(syndrome_bits), "Unknown error pattern")

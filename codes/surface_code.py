@@ -33,5 +33,14 @@ def surface_encoder():
         return state, syndrome
 
     return combined_circuit
-def surface_decoder(state):
-    return state
+
+def surface_decoder(syndrome_bits):
+    if syndrome_bits == [0, 0]:
+        return "No error"
+    elif syndrome_bits == [1, 0]:
+        return "Possible X error on qubit 0 or 1"
+    elif syndrome_bits == [0, 1]:
+        return "Possible X error on qubit 1 or 3"
+    elif syndrome_bits == [1, 1]:
+        return "Multiple X errors or propagation"
+    return "Unknown error pattern"
