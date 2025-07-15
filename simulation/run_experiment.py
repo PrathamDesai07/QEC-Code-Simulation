@@ -9,6 +9,10 @@ import numpy as np
 import datetime
 import pandas as pd
 from functools import reduce
+import time
+import tracemalloc
+import matplotlib.pyplot as plt
+import pennylane as qml
 
 CSV_PATH = "results/simulations.csv"
 LOG_PATH = "results/logs.csv"
@@ -44,6 +48,9 @@ def compute_syndrome(rho, stabilizers, num_wires):
         val = np.real(np.trace(rho @ op))
         syndrome.append(val)
     return syndrome
+
+def compare_states(state1, state2, atol=1e-2):
+    return np.allclose(state1, state2, atol=atol)
 
 def test_code(code_name, encoder, decoder, logical_bit=0, noise_type=None, p=0.0,
               stabilizers=None, num_wires=None, repeat=10):
@@ -85,6 +92,107 @@ def test_code(code_name, encoder, decoder, logical_bit=0, noise_type=None, p=0.0
 
     return results
 
+# Phase 7 functions
+def evaluate_logical_error_rate(code_name, encoder, decoder, noise_fn, noise_probs, trials=50):
+    error_rates = {}
+    for p in noise_probs:
+        errors = 0
+        circuit = encoder()
+        for _ in range(trials):
+            true_state, _ = circuit(logical_bit=0, noise_fn=None)
+            noisy_state, syndrome = circuit(logical_bit=0, noise_fn=noise_fn, noise_args={"prob": p})
+            decoded = decoder([int(s < 0) for s in syndrome])
+            if not compare_states(true_state, noisy_state):
+                errors += 1
+        error_rates[p] = errors / trials
+        print(f"{code_name} | p={p:.2f} → Logical Error Rate: {error_rates[p]:.3f}")
+    return error_rates
+
+def profile_decoder(decoder, syndrome_bits):
+    start = time.perf_counter()
+    tracemalloc.start()
+    _ = decoder(syndrome_bits)
+    peak_memory = tracemalloc.get_traced_memory()[1] / 1024
+    tracemalloc.stop()
+    elapsed_time = time.perf_counter() - start
+    return elapsed_time, peak_memory
+
+def compare_decoder_performance(codes):
+    time_stats = {}
+    memory_stats = {}
+
+    for name, (enc, dec) in codes.items():
+        times, memories = [], []
+        for _ in range(10):
+            state, syndrome = enc()(logical_bit=0, noise_fn=None)
+            elapsed, mem = profile_decoder(dec, [int(s < 0) for s in syndrome])
+            times.append(elapsed)
+            memories.append(mem)
+        time_stats[name] = np.mean(times)
+        memory_stats[name] = np.mean(memories)
+    return time_stats, memory_stats
+
+def plot_logical_error_rates(error_rates_dict):
+    for code, results in error_rates_dict.items():
+        xs, ys = list(results.keys()), list(results.values())
+        plt.plot(xs, ys, marker='o', label=code)
+    plt.title("Logical Error Rate vs Noise Probability")
+    plt.xlabel("Noise Probability")
+    plt.ylabel("Logical Error Rate")
+    plt.legend()
+    plt.grid(True)
+    plt.savefig("results/logical_error_plot.png")
+    plt.show()
+
+def plot_decoder_bars(time_stats, memory_stats):
+    codes = list(time_stats.keys())
+    plt.figure(figsize=(10, 4))
+
+    plt.subplot(1, 2, 1)
+    plt.bar(codes, [time_stats[c] for c in codes])
+    plt.title("Decoder Runtime")
+    plt.ylabel("Time (s)")
+
+    plt.subplot(1, 2, 2)
+    plt.bar(codes, [memory_stats[c] for c in codes])
+    plt.title("Decoder Memory Usage")
+    plt.ylabel("Memory (KB)")
+
+    plt.tight_layout()
+    plt.savefig("results/decoder_complexity.png")
+    plt.show()
+
+def run_phase7():
+    noise_probs = np.linspace(0, 0.5, 6)
+    code_map = {
+        "Shor": (shor_encoder, shor_decoder),
+        "Steane": (steane_encoder, steane_decoder),
+        "Surface": (surface_encoder, surface_decoder),
+    }
+
+    all_rates = {}
+    for name, (enc, dec) in code_map.items():
+        err = evaluate_logical_error_rate(
+            name, enc, dec,
+            noise_fn=lambda wires, prob: qml.DepolarizingChannel(prob, wires=wires),
+            noise_probs=noise_probs,
+            trials=50
+        )
+        all_rates[name] = err
+
+    plot_logical_error_rates(all_rates)
+
+    time_stats, memory_stats = compare_decoder_performance(code_map)
+    plot_decoder_bars(time_stats, memory_stats)
+
+    summary = pd.DataFrame({
+        "Code": list(code_map.keys()),
+        "Decoder Time (s)": [time_stats[k] for k in code_map],
+        "Memory Usage (KB)": [memory_stats[k] for k in code_map],
+    })
+    summary.to_csv("results/decoder_performance.csv", index=False)
+    print(summary)
+
 # Stabilizers for each code
 SHOR_STABILIZERS = [(0,1), (1,2), (3,4), (4,5), (6,7), (7,8)]
 STEANE_STABILIZERS = [(0,1,2,3), (0,2,4,6), (1,2,5,6)]
@@ -112,3 +220,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    run_phase7()
