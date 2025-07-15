@@ -7,8 +7,10 @@ from noise.phase_flip import apply_phase_flip
 from noise.depolarizing import apply_depolarizing
 import numpy as np
 import datetime
+import pandas as pd
 from functools import reduce
 
+CSV_PATH = "results/simulations.csv"
 LOG_PATH = "results/logs.csv"
 
 def log_and_print(message):
@@ -43,9 +45,8 @@ def compute_syndrome(rho, stabilizers, num_wires):
         syndrome.append(val)
     return syndrome
 
-def test_code(code_name, encoder, decoder, logical_bit=0, noise_type=None, p=0.0, stabilizers=None, num_wires=None):
-    header = f"Testing {code_name} with logical bit |{logical_bit}⟩ and noise={noise_type}, p={p}"
-    log_and_print("\n" + header)
+def test_code(code_name, encoder, decoder, logical_bit=0, noise_type=None, p=0.0,
+              stabilizers=None, num_wires=None, repeat=10):
 
     noise_fn = {
         "bit_flip": apply_bit_flip,
@@ -53,29 +54,36 @@ def test_code(code_name, encoder, decoder, logical_bit=0, noise_type=None, p=0.0
         "depolarizing": apply_depolarizing
     }.get(noise_type, None)
 
-    # Run encoding + noise
-    circuit = encoder()
-    rho, _ = circuit(logical_bit=logical_bit, noise_fn=noise_fn, noise_args={"p": p})
+    results = []
 
-    # Validate state & compute fidelity
-    if is_valid_quantum_state(rho):
+    for trial in range(repeat):
+        circuit = encoder()
+        rho, _ = circuit(logical_bit=logical_bit, noise_fn=noise_fn, noise_args={"p": p})
+
+        if not is_valid_quantum_state(rho):
+            log_and_print(f"[ERROR] {code_name} - invalid state on trial {trial}")
+            continue
+
         fid = fidelity_with_expected(rho, logical_bit)
-        log_and_print(f"[VALID] State trace ok. Fidelity w/ expected |{logical_bit}⟩ = {fid:.4f}")
-        log_and_print("[SUCCESS] High fidelity match." if fid > 0.9 else "[WARNING] Low fidelity — likely logical error.")
-    else:
-        log_and_print(f"[FAIL] {code_name} state is not valid.")
+        synd_vals = compute_syndrome(rho, stabilizers, num_wires)
+        synd_bits = [1 if val < 0 else 0 for val in synd_vals]
+        decoded = decoder(synd_bits)
 
-    # Classical syndrome extraction
-    synd_vals = compute_syndrome(rho, stabilizers, num_wires)
-    synd_bits = [1 if val < 0 else 0 for val in synd_vals]
-    log_and_print(f"Syndrome values: {np.round(synd_vals, 3).tolist()}")
-    log_and_print(f"Syndrome bits:   {synd_bits}")
+        logical_error = fid < 0.9
 
-    # Classical decoder usage
-    decoded = decoder(synd_bits)
-    log_and_print(f"Decoder output: {decoded}")
+        results.append({
+            "code": code_name,
+            "logical_bit": logical_bit,
+            "noise_type": noise_type if noise_type else "none",
+            "noise_prob": p,
+            "syndrome": synd_bits,
+            "decoded_result": decoded,
+            "logical_error": logical_error,
+            "fidelity": fid,
+            "trial": trial
+        })
 
-    return rho
+    return results
 
 # Stabilizers for each code
 SHOR_STABILIZERS = [(0,1), (1,2), (3,4), (4,5), (6,7), (7,8)]
@@ -86,15 +94,21 @@ def main():
     with open(LOG_PATH, "a") as f:
         f.write(f"\n==== LOG START: {datetime.datetime.now()} ====\n")
 
+    df_logs = []
+
     noise_models = [None, "bit_flip", "phase_flip", "depolarizing"]
     for noise in noise_models:
         for bit in [0, 1]:
-            test_code("Shor", shor_encoder, shor_decoder, bit, noise, p=0.9,
-                      stabilizers=SHOR_STABILIZERS, num_wires=9)
-            test_code("Steane", steane_encoder, steane_decoder, bit, noise, p=0.9,
-                      stabilizers=STEANE_STABILIZERS, num_wires=7)
-            test_code("Surface", surface_encoder, surface_decoder, bit, noise, p=0.9,
-                      stabilizers=SURFACE_STABILIZERS, num_wires=5)
+            df_logs += test_code("Shor", shor_encoder, shor_decoder, bit, noise, p=0.9,
+                                 stabilizers=SHOR_STABILIZERS, num_wires=9)
+            df_logs += test_code("Steane", steane_encoder, steane_decoder, bit, noise, p=0.9,
+                                 stabilizers=STEANE_STABILIZERS, num_wires=7)
+            df_logs += test_code("Surface", surface_encoder, surface_decoder, bit, noise, p=0.9,
+                                 stabilizers=SURFACE_STABILIZERS, num_wires=5)
+
+    df = pd.DataFrame(df_logs)
+    df.to_csv(CSV_PATH, index=False)
+    log_and_print(f"Simulation results saved to: {CSV_PATH}")
 
 if __name__ == "__main__":
     main()

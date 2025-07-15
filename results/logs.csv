@@ -2000,3 +2000,8 @@ Testing Surface with logical bit |1⟩ and noise=depolarizing, p=0.9
 Syndrome values: [0.04, 0.04]
 Syndrome bits:   [0, 0]
 Decoder output: No error
+
+==== LOG START: 2025-07-15 13:51:51.313578 ====
+
+==== LOG START: 2025-07-15 13:53:00.972789 ====
+Simulation results saved to: results/simulations.csv
