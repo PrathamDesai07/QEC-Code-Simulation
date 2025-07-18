@@ -1,3 +1,4 @@
+
 # === FILE: codes/steane.py ===
 import pennylane as qml
 from pennylane import numpy as np
@@ -39,6 +40,7 @@ def steane_encoder():
     return combined_circuit
 
 def steane_decoder(syndrome_bits):
+    rounded = [int(bit > 0.5) for bit in syndrome_bits]
     table = {
         (0, 0, 0): "No error",
         (1, 0, 0): "Error on qubit 0",
@@ -49,4 +51,4 @@ def steane_decoder(syndrome_bits):
         (0, 1, 1): "Error on qubit 5",
         (1, 1, 1): "Error on qubit 6",
     }
-    return table.get(tuple(syndrome_bits), "Unknown error pattern")
+    return table.get(tuple(rounded), "Unknown error pattern")

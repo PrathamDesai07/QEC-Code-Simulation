@@ -10,14 +10,14 @@ def shor_encoder():
         if logical_bit == 1:
             qml.X(wires=0)
 
+        # Encoding for Shor's 9-qubit code
         qml.CNOT(wires=[0, 1])
         qml.CNOT(wires=[0, 2])
 
         for i in [0, 1, 2]:
             qml.Hadamard(wires=i)
-            qml.CNOT(wires=[i, i+3])
-            qml.CNOT(wires=[i, i+6])
-            qml.Hadamard(wires=i)
+            qml.CNOT(wires=[i, i + 3])
+            qml.CNOT(wires=[i, i + 6])
 
         if noise_fn:
             noise_fn(wires=range(9), **(noise_args or {}))
@@ -43,6 +43,7 @@ def shor_encoder():
     return combined_circuit
 
 def shor_decoder(syndrome_bits):
+    rounded = [int(bit > 0.5) for bit in syndrome_bits]
     table = {
         (0, 0, 0, 0, 0, 0): "No error",
         (1, 0, 0, 0, 0, 0): "Bit-flip on qubit 0 or 1",
@@ -52,4 +53,4 @@ def shor_decoder(syndrome_bits):
         (0, 0, 0, 0, 1, 0): "Bit-flip on qubit 6 or 7",
         (0, 0, 0, 0, 0, 1): "Bit-flip on qubit 7 or 8",
     }
-    return table.get(tuple(syndrome_bits), "Unknown error pattern")
+    return table.get(tuple(rounded), "Unknown error pattern")

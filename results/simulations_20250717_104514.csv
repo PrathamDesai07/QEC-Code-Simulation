@@ -1,0 +1,241 @@
+code,logical_bit,noise_type,noise_prob,syndrome,decoded_result,logical_error,fidelity,trial
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,0
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,1
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,2
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,3
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,4
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,5
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,6
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,7
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,8
+Shor,0,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500004198930104,9
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,0
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,1
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,2
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,3
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,4
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,5
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,6
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,7
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,8
+Steane,0,none,0.9,"[0, 0, 0]",No error,True,0.4999999999999996,9
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,0
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,1
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,2
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,3
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,4
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,5
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,6
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,7
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,8
+Surface,0,none,0.9,"[0, 0]",No error,False,1.0,9
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,0
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,1
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,2
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,3
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,4
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,5
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,6
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,7
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,8
+Shor,1,none,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,1.5076994399827608e-17,9
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,0
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,1
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,2
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,3
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,4
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,5
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,6
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,7
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,8
+Steane,1,none,0.9,"[0, 0, 0]",No error,True,0.0,9
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,0
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,1
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,2
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,3
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,4
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,5
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,6
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,7
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,8
+Surface,1,none,0.9,"[0, 0]",No error,True,0.0,9
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,0
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,1
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,2
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,3
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,4
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,5
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,6
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,7
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,8
+Shor,0,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.048627140933445355,9
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,0
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,1
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,2
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,3
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,4
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,5
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,6
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,7
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,8
+Steane,0,bit_flip,0.9,"[0, 0, 0]",No error,True,0.23914854764151897,9
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,0
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,1
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,2
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,3
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,4
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,5
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,6
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,7
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,8
+Surface,0,bit_flip,0.9,"[0, 0]",No error,True,1.0000000000004986e-05,9
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,0
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,1
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,2
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,3
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,4
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,5
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,6
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,7
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,8
+Shor,1,bit_flip,0.9,"[0, 1, 1, 1, 0, 1]",Unknown error pattern,True,0.005995127339233294,9
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,0
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,1
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,2
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,3
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,4
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,5
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,6
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,7
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,8
+Steane,1,bit_flip,0.9,"[0, 0, 0]",No error,True,0.026572504626875944,9
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,0
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,1
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,2
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,3
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,4
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,5
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,6
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,7
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,8
+Surface,1,bit_flip,0.9,"[0, 0]",No error,True,0.06561000000000948,9
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,0
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,1
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,2
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,3
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,4
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,5
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,6
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,7
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,8
+Shor,0,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.12500001947512657,9
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,0
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,1
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,2
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,3
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,4
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,5
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,6
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,7
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,8
+Steane,0,phase_flip,0.9,"[0, 0, 0]",No error,True,0.5000000013171588,9
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,0
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,1
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,2
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,3
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,4
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,5
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,6
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,7
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,8
+Surface,0,phase_flip,0.9,"[0, 0]",No error,False,1.0000000000001,9
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,0
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,1
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,2
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,3
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,4
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,5
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,6
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,7
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,8
+Shor,1,phase_flip,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,8.272988832119277e-18,9
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,0
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,1
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,2
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,3
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,4
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,5
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,6
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,7
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,8
+Steane,1,phase_flip,0.9,"[0, 0, 0]",No error,True,0.0,9
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,0
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,1
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,2
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,3
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,4
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,5
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,6
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,7
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,8
+Surface,1,phase_flip,0.9,"[0, 0]",No error,True,0.0,9
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,0
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,1
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,2
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,3
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,4
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,5
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,6
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,7
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,8
+Shor,0,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0027440000277968017,9
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,0
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,1
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,2
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,3
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,4
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,5
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,6
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,7
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,8
+Steane,0,depolarizing,0.9,"[0, 0, 0]",No error,True,0.014816000000003519,9
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,0
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,1
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,2
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,3
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,4
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,5
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,6
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,7
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,8
+Surface,0,depolarizing,0.9,"[0, 0]",No error,True,0.010240000000002546,9
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,0
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,1
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,2
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,3
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,4
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,5
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,6
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,7
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,8
+Shor,1,depolarizing,0.9,"[0, 0, 0, 0, 0, 0]",No error,True,0.0023520000219806945,9
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,0
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,1
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,2
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,3
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,4
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,5
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,6
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,7
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,8
+Steane,1,depolarizing,0.9,"[0, 0, 0]",No error,True,0.010560000000002725,9
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,0
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,1
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,2
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,3
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,4
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,5
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,6
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,7
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,8
+Surface,1,depolarizing,0.9,"[0, 0]",No error,True,0.05184000000000945,9

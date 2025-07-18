@@ -1,6 +1,8 @@
+
 # === FILE: codes/surface_code.py ===
 import pennylane as qml
 from pennylane import numpy as np
+import pymatching
 
 def surface_encoder():
     dev = qml.device("default.mixed", wires=5)
@@ -34,30 +36,19 @@ def surface_encoder():
 
     return combined_circuit
 
-import pymatching
-
 def surface_decoder(syndrome_bits):
-    # Hardcoded 2D surface code graph with 2 stabilizers and 3 edges (simplified)
-    # This is only for a minimal toy model. For real codes, this graph must be built properly.
-    
-    # Syndrome indices match stabilizers [Z0Z1, Z1Z3]
-    # Qubits: 0, 1, 2, 3, 4 (data)
-    # Stabilizers: s0 = Z0Z1, s1 = Z1Z3
+    rounded = [int(bit > 0.5) for bit in syndrome_bits]
 
-    # Define parity check matrix (rows: stabilizers, cols: qubits)
     H = [
-        [1, 1, 0, 0, 0],  # Z0Z1: touches qubits 0,1
-        [0, 1, 0, 1, 0],  # Z1Z3: touches qubits 1,3
+        [1, 1, 0, 0, 0],
+        [0, 1, 0, 1, 0],
     ]
 
     matching = pymatching.Matching(H)
-    
-    # MWPM decoding: input is syndrome bits
-    correction = matching.decode(syndrome_bits)
+    correction = matching.decode(rounded)
 
     if not any(correction):
         return "No error"
 
-    # Identify which qubits were corrected
     qubits = [i for i, bit in enumerate(correction) if bit]
     return f"MWPM corrected qubit(s): {qubits}"
